@@ -1,0 +1,87 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>EECS 492 A1 Results</title>
+</head>
+<body>
+<p>
+EECS 492 A1 Results<br>
+Christopher Spencer Buja<br>
+September 25, 2015<br>
+</p>
+<h2>A1 Results</h2>
+<p>
+The purpose of this project is to recreate
+<a href="http://rogeralsing.com/2008/12/07/genetic-programming-evolution-of-mona-lisa/">Roger
+Alsing's work on genetic programming to create art</a>.
+The population consists of approximations to a given image.
+Each image uses P polygons, where P=100 for the results on this page.
+N is the population size and K is the number of new children created per generation.
+T is the number of generations displayed in each animation.
+The fitness of the image is a measure of how closely it matches the original image.
+The learning curve shows how the fitness of the best approximation improves over time.
+The 2D graphs depict how the fitness after T generations varies with N and K where the color of the points on the graph scale with the best fitness score obtained with parameters N and K.
+</p>
+<table border=1>
+<tr>
+<th>Original image</th>
+<th>Approximation</th>
+<th>Learning curve</th>
+</tr>
+<tr>
+<td>96&times;96 pixels<br><img src="darwin.jpg"></td>
+<td>P=100, N=1, K=2, E=331001 <br><img src="darwin.gif"></td>
+<td><img src="darwinfitnessgraph.png"></td>
+</tr>
+<tr>
+<td>38&times;38 pixels<br><img src="small_simle.jpg"></td>
+<td>P=100, N=1, K=2, E=133001  - This gif was created by displaying BGR values, instead of RGB values.<br><img src="small_simle.gif"></td>
+<td><img src="small_simlefitnesscurve.png"></td>
+</tr>
+<tr>
+<td>102&times;102 pixels<br><img src="thescream.jpg"></td>
+<td>P=100, N=1, K=2, E=25,000 - This gif was created by displaying BGR values, instead of RGB values.<br><img src="thescream.gif"></td>
+<td><img src="thescreamfitnesscurve.png"></td>
+</tr>
+<tr>
+<td>128&times;128 pixels <br><img src="monalisa.jpg"></td>
+<td>P=100, N=1, K=2, E=25,000  - This gif was created by displaying BGR values, instead of RGB values.<br><img src="monalisa.gif"></td>
+<td><img src="monalisafitnesscurve.png"></td>
+</tr>
+<tr>
+<td>300&times;293 pixels<br><img src="bigdarwin.jpg"></td>
+<td>P=100, N=1, K=2, E=25,000<br><img src="bigdarwin.gif"></td>
+<td><img src="bigdarwinfitnesscurve.png"></td>
+</tr>
+<tr>
+</tr>
+</table>
+<img width=600 height=600 src="twoDplot.jpg"><br>
+I searched to find the best parameters to get the highest fitness value. N=1, K=2 gave the best result overall after 25000 generations. This I applied the genetic algorithm for the purposes of this graph on the small darwin image at the top.<br>
+<hr>
+<p>
+Mutations for a child generated from crossover:
+<ul>
+<li>With 1/4 probability, slightly change position of all points in a random polygon.</li>
+<li>With 1/4 probability, slightly change the alpha value of random shape.</li>
+<li>With 1/4 probability, slightly change all three rgb values of a random polygon.</li>
+<li>With 1/4 probability, change the render ordering of two polygons.</li>
+</ul>
+Coordinates of vertices were moved using a Gaussian distribution where the mean is the previous coordinate, and the variance is 0.2 multiplied by the maximum width or the height. <br/>
+RGB values (0.0 to 255) were altered using a Gaussian distribution where the mean is the color, and the variance is 40. <br/>
+Alpha values were altered using a Gaussian distribution where the mean is the former alpha value, and the variance is 0.2 .<br/>
+Ordering was changed by drawing from a discretized uniform distribution twice and changing the rendering order of the polygons.
+</p>
+<p>
+Random triangles were created by picking three points on the image with uniform distribution, and filling the area between those points with an rgb and alpha value.
+</p>
+<p>
+Parents were selected using the <a href="https://en.wikipedia.org/wiki/Fitness_proportionate_selection">roulette selection algorithm</a>. This made the more fit individuals
+more likely to be chosen for crossover.
+</p>
+</body>
+</html>
+
+
+
