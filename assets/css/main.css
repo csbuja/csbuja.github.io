@@ -852,7 +852,9 @@
 	}
 
 	@media screen and (max-width: 736px) {
-
+		#fishpic {
+			display: none;
+		}
 		.row > * {
 			padding: 10px 0 0 10px;
 		}
