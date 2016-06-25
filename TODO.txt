@@ -1,5 +1,5 @@
 1. Fix Google Analytics
 2. Optimize images
-3.
+3. fix email
 4.
 5.
