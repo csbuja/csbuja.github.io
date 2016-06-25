@@ -1310,6 +1310,12 @@
 			border-color: black;
 		}
 
+		#fishpic {
+			border-radius: 15px;
+			border: 4px solid;
+			border-color: black;
+		}
+
 		#projects img {
 			display: block;
 			width: 330px;
