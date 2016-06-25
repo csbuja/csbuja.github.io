@@ -121,30 +121,14 @@ window.onload = function() {
 	body.className +=' loaded';
 };
 
-/*
-	Function to Send the Form to my firebase
- */
+function TypingInEmail(){
 
-function sendForm() {
-	var name = $('#contact-name').val();
-	var email = $('#contact-email').val();
-	var message = $('#contact-message').val();
-	var dateTime = new Date();
-	var ref = new Firebase('https://akshays-website.firebaseio.com/contact');
-	ref.push({'Name': name, 'Email': email, 'Message': message, 'Date-Time': dateTime.toString()});
-	console.log(ref.toString());
 }
 
+function TypingInBody(){
 
+}
 
-
- /*
- Google Analytics
-  */
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-79770649-1', 'auto');
-    ga('send', 'pageview');
+function sendForm() {
+	return null;
+}

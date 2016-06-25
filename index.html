@@ -38,7 +38,7 @@
 	      		Thank You!
 	    	</div>
 	    	<div class="model-body">
-	      		An Email has been sent to me. <br>
+	      		I am opening an email client program on your computer, so you can send the mail to me. <br>
 	      		I will reply as soon as can.
 	    	</div>
 	    </div>
@@ -211,7 +211,7 @@ Alsing's work on genetic programming to create art</a>.</p>
 							<div class="6u 12u(mobile)">
 
 								<!-- Contact Form -->
-									<section>
+									<section hidden="true">
 										<form name="contactform">
 											<div class="row 50%">
 												<div class="6u 12u(mobile)">
@@ -228,8 +228,10 @@ Alsing's work on genetic programming to create art</a>.</p>
 											</div>
 											<div class="row">
 												<div class="12u">
-													<ul class="actions">
-														<li><input type="button" class="style1" value="Send" onclick="sendForm()" data-toggle="modal" data-target=".bs-example-modal-sm" /></li>
+													<ul class="actions"><body>
+														<a id="FormSender" href = 'mailto:csbuja@gmail.com?body="&&&hello"&subject="".'>
+															<li><input type="button" class="style1" value="Send" onclick="sendForm()" data-toggle="modal" data-target=".bs-example-modal-sm" /></li>
+														</a>
 														<li><input type="reset" class="style2" value="Reset" /></li>
 													</ul>
 												</div>
