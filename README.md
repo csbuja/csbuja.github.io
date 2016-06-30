@@ -5,3 +5,4 @@ This website contains information about me. You can find my protfolio along with
 <br> I would appreciate it if you could provide constructive feedback on what I can do to make my website better.
 <br>Hope you like it!</p>
 <br>
+I used a lot of <a href="http://akshaygoel.net" >Akshay Goel</a>'s source code, which is available <a href ="https://github.com/AkshayGoelTech/AkshayGoelTech.github.io">here</a>.
